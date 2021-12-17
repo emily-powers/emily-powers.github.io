@@ -14814,13 +14814,13 @@ Rihanna
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>We can see that the usage of the word love peaked around 1980 but was at an all time low in the early 2000s. This is interesting because song length was the highest in the early 2000s, so there being such a low proportion of "love" is signifcant.</p>
-<h2 id="Model">Model<a class="anchor-link" href="#Model">&#182;</a></h2><p>With this data, we plan to use NLP to build our sentiment analysis. Sentiment analysis identifies the positivity or negativity of lyrics which can answer the question if sounds have gotten more negative over time. Each word is classfied as positive (good i.e. love) or negative (bad i.e. death) which can be used to predict the feeling of the song. For both of these models, we will use scikit learn libraries to perform machine learning and natural language preprocessing such as lemmitization and stemming. These two techinques get the root of the word which reduces the dictionary of all words in the data and the computing power of the model. For example, "get", "got" and "getting" will all be mapped to "go."</p>
+<h2 id="Model">Model<a class="anchor-link" href="#Model">&#182;</a></h2><p>With this data, we plan to use NLP to build our sentiment analysis. Sentiment analysis identifies the positivity or negativity of lyrics which can answer the question if sounds have gotten more negative over time. Each word is classfied as positive (good i.e. love) or negative (bad i.e. death) which can be used to predict the feeling of the song.</p>
 <p>We used the Natural Language Toolkit (nltk) to run this experiment, sepcifically the Sentiment Intensity Analyzer.</p>
 <p>To quantify the sentiment analysis we used VADER (Valence Aware Dictionary and Sentiment Reasoner) scores in conjunction with the Sentiment Intensity Analyzer. This method returns a dictionary with a positive, negative, netural, and compound score (normalization of positive, negative, and neutral scores) for each song. We used compound score which gives overall sentiment as well as the intensity of the emotion. The way songs are classfied are as follows:</p>
 <p>Positive if compound &gt;= 0.5</p>
 <p>Neutral if -0.5 &lt; compound &lt; 0.5</p>
 <p>Negative if -0.5 &gt;= compound</p>
-<p><a href="https://www.analyticsvidhya.com/blog/2021/06/rule-based-sentiment-analysis-in-python/">https://www.analyticsvidhya.com/blog/2021/06/rule-based-sentiment-analysis-in-python/</a></p>
+<p>source: <a href="https://www.analyticsvidhya.com/blog/2021/06/rule-based-sentiment-analysis-in-python/">https://www.analyticsvidhya.com/blog/2021/06/rule-based-sentiment-analysis-in-python/</a></p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15321,6 +15321,7 @@ Rihanna
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>Our original hypothesis with our sentiment analysis was that songs have gotten more negative over time. Through our NLP model we found this to be true. In order to verify these results, we visualized not only the compound scores but also the trends over time for the songs already categorized into being positive or negative. We calculated a simple regression on each of these plots and found the slopes of those lines supported our hypothesis.</p>
+<p>There are a variety of inclinations that we had as to why this would be the case (psychological priming, cultural acceptance of negativity, remembering negative stimuli better than positive ones, etc). We could easily expand upon this study to see if we could attribute a cause to the phenomenon we observed of increased lyrical negativity.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
